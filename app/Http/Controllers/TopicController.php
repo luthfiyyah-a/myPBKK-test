@@ -16,7 +16,8 @@ class TopicController extends Controller
         
         return view('dashboard.penawaran-topik', [
             'topics' => $topics,
-            'nama' => 'Luthfiyyah'
+            'nama' => 'Luthfiyyah',
+            'page' => 'penawaran-topik'
         ]);
     }
 }

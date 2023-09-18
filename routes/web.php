@@ -16,7 +16,7 @@ use App\Http\Controllers\TopicController;
 
 Route::get('/', function () {
     return view('landing-page');
-});
+})->name('landing-page');
 
 Route::get('/masuk', function() {
     return 'halaman masuk';
@@ -31,12 +31,13 @@ Route::get('/daftar', function() {
 Route::get('/dashboard', function() {
     return view('dashboard.beranda')
                 ->with('nama', 'Luthfiyyah')
-                ->with('pekerjaan', 'Mahasiswa');
+                ->with('page', 'beranda');
 })->name('dashboard');
 
 Route::get('/dashboard/tugas-akhir', function() {
     return view('dashboard.tugas-akhir', [
-        'nama' => 'Luthfiyyah'
+        'nama' => 'Luthfiyyah',
+        'page' => 'tugas-akhir'
     ]);
 })->name('tugas-akhir');
 

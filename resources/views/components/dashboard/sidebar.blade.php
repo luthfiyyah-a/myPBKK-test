@@ -1,13 +1,13 @@
 <div class="sidebar">
-    <ul class="nav flex-column">
+    <ul class="nav flex-column nav-pills">
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('dashboard') }}">Beranda</a>
+            <a class="nav-link {{ ($page=='beranda'? "active": "") }}" href="{{ route('dashboard') }}">Beranda</a>
         </li>
         <li class="nav-item ">
-            <a class="nav-link" href="{{ route('penawaran-topik') }}">Penawaran Topik</a>
+            <a class="nav-link {{ ($page=='penawaran-topik'? "active": "") }}" href="{{ route('penawaran-topik') }}">Penawaran Topik</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('tugas-akhir') }}">Tugas Akhir</a>
+            <a class="nav-link {{ ($page=='tugas-akhir'? "active": "") }}" href="{{ route('tugas-akhir') }}">Tugas Akhir</a>
         </li>
     </ul>
 </div>
